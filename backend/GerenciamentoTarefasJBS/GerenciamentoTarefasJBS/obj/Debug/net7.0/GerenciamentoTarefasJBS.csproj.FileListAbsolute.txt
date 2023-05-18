@@ -31,3 +31,13 @@ C:\workspace\JBS\backend\GerenciamentoTarefasJBS\GerenciamentoTarefasJBS\obj\Deb
 C:\workspace\JBS\backend\GerenciamentoTarefasJBS\GerenciamentoTarefasJBS\obj\Debug\net7.0\GerenciamentoTarefasJBS.pdb
 C:\workspace\JBS\backend\GerenciamentoTarefasJBS\GerenciamentoTarefasJBS\obj\Debug\net7.0\GerenciamentoTarefasJBS.genruntimeconfig.cache
 C:\workspace\JBS\backend\GerenciamentoTarefasJBS\GerenciamentoTarefasJBS\obj\Debug\net7.0\ref\GerenciamentoTarefasJBS.dll
+C:\workspace\JBS\GerenciamentoTarefasJBS\backend\GerenciamentoTarefasJBS\GerenciamentoTarefasJBS\obj\Debug\net7.0\GerenciamentoTarefasJBS.csproj.AssemblyReference.cache
+C:\workspace\JBS\GerenciamentoTarefasJBS\backend\GerenciamentoTarefasJBS\GerenciamentoTarefasJBS\obj\Debug\net7.0\GerenciamentoTarefasJBS.GeneratedMSBuildEditorConfig.editorconfig
+C:\workspace\JBS\GerenciamentoTarefasJBS\backend\GerenciamentoTarefasJBS\GerenciamentoTarefasJBS\obj\Debug\net7.0\GerenciamentoTarefasJBS.AssemblyInfoInputs.cache
+C:\workspace\JBS\GerenciamentoTarefasJBS\backend\GerenciamentoTarefasJBS\GerenciamentoTarefasJBS\obj\Debug\net7.0\GerenciamentoTarefasJBS.AssemblyInfo.cs
+C:\workspace\JBS\GerenciamentoTarefasJBS\backend\GerenciamentoTarefasJBS\GerenciamentoTarefasJBS\obj\Debug\net7.0\GerenciamentoTarefasJBS.csproj.CoreCompileInputs.cache
+C:\workspace\JBS\GerenciamentoTarefasJBS\backend\GerenciamentoTarefasJBS\GerenciamentoTarefasJBS\obj\Debug\net7.0\GerenciamentoTarefasJBS.MvcApplicationPartsAssemblyInfo.cs
+C:\workspace\JBS\GerenciamentoTarefasJBS\backend\GerenciamentoTarefasJBS\GerenciamentoTarefasJBS\obj\Debug\net7.0\GerenciamentoTarefasJBS.MvcApplicationPartsAssemblyInfo.cache
+C:\workspace\JBS\GerenciamentoTarefasJBS\backend\GerenciamentoTarefasJBS\GerenciamentoTarefasJBS\obj\Debug\net7.0\GerenciamentoTarefasJBS.dll
+C:\workspace\JBS\GerenciamentoTarefasJBS\backend\GerenciamentoTarefasJBS\GerenciamentoTarefasJBS\obj\Debug\net7.0\refint\GerenciamentoTarefasJBS.dll
+C:\workspace\JBS\GerenciamentoTarefasJBS\backend\GerenciamentoTarefasJBS\GerenciamentoTarefasJBS\obj\Debug\net7.0\GerenciamentoTarefasJBS.pdb

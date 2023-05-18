@@ -1,4 +1,6 @@
-﻿namespace GerenciamentoTarefasJBS.Models
+﻿using System.Collections.Generic;
+
+namespace GerenciamentoTarefasJBS.Models
 {
     public class User
     {
