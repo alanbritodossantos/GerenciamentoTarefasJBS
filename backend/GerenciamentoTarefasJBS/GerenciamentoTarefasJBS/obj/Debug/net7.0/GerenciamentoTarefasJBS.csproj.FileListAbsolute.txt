@@ -107,3 +107,4 @@ C:\workspace\JBS\GerenciamentoTarefasJBS\backend\GerenciamentoTarefasJBS\Gerenci
 C:\workspace\JBS\GerenciamentoTarefasJBS\backend\GerenciamentoTarefasJBS\GerenciamentoTarefasJBS\obj\Debug\net7.0\GerenciamentoTarefasJBS.csproj.CopyComplete
 C:\workspace\JBS\GerenciamentoTarefasJBS\backend\GerenciamentoTarefasJBS\GerenciamentoTarefasJBS\obj\Debug\net7.0\GerenciamentoTarefasJBS.genruntimeconfig.cache
 C:\workspace\JBS\GerenciamentoTarefasJBS\backend\GerenciamentoTarefasJBS\GerenciamentoTarefasJBS\obj\Debug\net7.0\ref\GerenciamentoTarefasJBS.dll
+C:\workspace\JBS\GerenciamentoTarefasJBS\backend\GerenciamentoTarefasJBS\GerenciamentoTarefasJBS\bin\Debug\net7.0\Microsoft.AspNetCore.Authentication.JwtBearer.dll
