@@ -1,7 +1,7 @@
 <template>
   <div>
     <h1>Bem-vindo à nossa aplicação de gerenciamento de tarefas!</h1>
-    <p>Esta é a página inicial.</p>
+    <p>Esta é a página HomePage.</p>
   </div>
 </template>
 
