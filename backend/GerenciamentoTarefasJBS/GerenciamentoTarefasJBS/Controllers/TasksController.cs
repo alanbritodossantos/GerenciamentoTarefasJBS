@@ -5,9 +5,11 @@ using GerenciamentoTarefasJBS.Data;
 using System.Linq;
 using Task = GerenciamentoTarefasJBS.Models.Task;
 using Microsoft.EntityFrameworkCore;
+using Microsoft.AspNetCore.Authorization;
 
 namespace GerenciamentoTarefasJBS.Controllers
 {
+    [Authorize]// todas as ações na casse Tasks exijam autenticação
     // Definimos que esta classe é um controlador de API
     [ApiController]
     // Definimos a rota que será usada para acessar este controlador
@@ -26,17 +28,17 @@ namespace GerenciamentoTarefasJBS.Controllers
         // Este método retorna todas as tarefas do banco de dados
         // Ele responde a solicitações GET para a rota /tasks
         [HttpGet]
-        public ActionResult<List<Task>> GetTasks()
+        public async Task<ActionResult<List<Task>>> GetTasks()
         {
-            return _context.Tasks.ToList();
+            return await _context.Tasks.ToListAsync();
         }
 
         // Este método retorna uma tarefa específica com base no ID fornecido
         // Ele responde a solicitações GET para a rota /tasks/{id}
         [HttpGet("{id}")]
-        public ActionResult<Task> GetTask(int id)
+        public async Task<ActionResult<Task>> GetTask(int id)
         {
-            var task = _context.Tasks.Find(id);
+            var task = await _context.Tasks.FindAsync(id);
             if (task == null)
             {
                 // Se a tarefa não foi encontrada, retornamos um código de status 404

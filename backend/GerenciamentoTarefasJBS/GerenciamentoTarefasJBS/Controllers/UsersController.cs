@@ -13,6 +13,7 @@ using Microsoft.Extensions.Options;
 
 namespace GerenciamentoTarefasJBS.Controllers
 {
+    [Authorize]
     [ApiController]
     [Route("[controller]")]
     public class UsersController : ControllerBase
@@ -62,7 +63,54 @@ namespace GerenciamentoTarefasJBS.Controllers
         }
 
 
+        // PUT: api/Users/5
+        [HttpPut("{id}")]
+        public async Task<IActionResult> PutUser(int id, User user)
+        {
+            // Verificar se o ID fornecido corresponde ao ID do usuário a ser atualizado.
+            if (id != user.Id)
+            {
+                // Retornar um erro 400 se o ID não corresponder.
+                return BadRequest();
+            }
 
+            // Informar ao contexto do EF Core que o usuário foi modificado.
+            _context.Entry(user).State = EntityState.Modified;
+
+            try
+            {
+                // Tentar salvar as alterações no banco de dados.
+                await _context.SaveChangesAsync();
+            }
+            catch (DbUpdateConcurrencyException)
+            {
+                // Se ocorrer um erro de concorrência, verificar se o usuário ainda existe.
+                if (!UserExists(id))
+                {
+                    // Se o usuário não existir, retornar um erro 404.
+                    return NotFound();
+                }
+                else
+                {
+                    // Se ocorrer outro tipo de erro, lançar a exceção para ser tratada em um nível superior.
+                    throw;
+                }
+            }
+
+            // Se tudo correr bem e o usuário for atualizado com sucesso, retornar um código de status 204.
+            return NoContent();
+        }
+
+        // Método auxiliar para verificar se um usuário existe no banco de dados.
+        private bool UserExists(int id)
+        {
+            return _context.Users.Any(e => e.Id == id);
+        }
+
+
+
+
+        [AllowAnonymous] //não exije autenticação
         [HttpPost("login")]
         public async Task<IActionResult> Login([FromBody] User userParam)
         {
