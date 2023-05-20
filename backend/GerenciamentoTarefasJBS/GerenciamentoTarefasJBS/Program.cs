@@ -14,6 +14,20 @@ namespace GerenciamentoTarefasJBS
         {
             var builder = WebApplication.CreateBuilder(args);
 
+            //-----------------
+            builder.Services.AddCors(options =>
+            {
+                options.AddPolicy(name: "AllowAll",
+                                  builder =>
+                                  {
+                                      builder.WithOrigins("http://localhost:8080") // Substitua com o domínio do seu aplicativo Vue
+                                             .AllowAnyHeader()
+                                             .AllowAnyMethod();
+                                  });
+            });
+            //-----------------
+
+
             //----------------------------------------------------------------------------------------------------
             // Configuração do JWT
             var jwtSettings = builder.Configuration.GetSection("JwtSettings");
@@ -64,6 +78,7 @@ namespace GerenciamentoTarefasJBS
 
             app.UseHttpsRedirection();
 
+            app.UseCors("AllowAll");//--
             app.UseAuthentication();//--
 
             app.UseAuthorization();

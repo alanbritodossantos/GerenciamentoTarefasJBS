@@ -18,6 +18,8 @@
 </template>
 
 <script>
+import axios from 'axios';
+
 export default {
   name: 'LoginPage',
   data() {
@@ -29,8 +31,25 @@ export default {
     }
   },
   methods: {
-    submitForm() {
-      // função
+    async submitForm() {
+      try {
+        const response = await axios.post('http://localhost:5010/users/login', this.loginData);
+
+        if (response.status === 200) {
+          // Salvar o token de autenticação recebido em algum lugar
+          // Isso poderia ser no local storage, por exemplo:
+          window.localStorage.setItem('authToken', response.data.token);
+
+          // Redirecionar o usuário para a página de tarefas
+          this.$router.push('/tasks');
+        } else {
+          // Tratar erros retornados pelo servidor
+          console.error(response.data.message);
+        }
+      } catch (error) {
+        // Tratar erros que ocorrerem ao fazer a requisição
+        console.error(error);
+      }
     }
   }
 }
