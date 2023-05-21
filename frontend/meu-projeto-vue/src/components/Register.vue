@@ -31,12 +31,19 @@ export default {
   methods: {
     async submitForm() {
       try {
+        const authToken = window.localStorage.getItem("authToken");
+
         const response = await axios.post(
-          "http://localhost:5010/users/register",
-          this.registerData
+          "http://localhost:5010/users",
+          this.registerData,
+          {
+            headers: {
+              'Authorization': 'Bearer ' + authToken
+            }
+          }
         );
 
-        if (response.status === 200) {
+        if (response.status === 200 || response.status === 201) {
           // Redirecionar o usuário para a página de login
           this.$router.push("/login");
         } else {
